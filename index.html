@@ -5,9 +5,30 @@
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
         <title> ROCK PAPER SCISSORS</title>
+        <script>
+            window.onload = function() {
+            document.getElementById("wins").innerHTML = getWins();
+            document.getElementById("losses").innerHTML = getLosses();
+            document.getElementById("ties").innerHTML = getTies();
+            }
+            
+            window.onclick = function() {
+            document.getElementById("wins").innerHTML = getWins();
+            document.getElementById("losses").innerHTML = getLosses();
+            document.getElementById("ties").innerHTML = getTies();
+            }
+        </script>
     </head>
     <body>
         <h1>Lets play Rock Paper Scissors!</h1>
-        <h2>Please open the console to continue</h2>
+        <div class="statsContainer">
+        <div class="stats win">Wins: <p id="wins"></p></div>
+        <div class="stats lose">Losses: <p id="losses"></p></div>
+        <div class="stats tie">Ties: <p id="ties"></p></div>
+        </div>
+        <div class="buttonContainer">
+        <button class="button" onclick="winner(getHumanChoice())">Play again!</button>
+        <button class="button" onclick="reset()">Reset</button>
+        </div>
     </body>
 </html>
