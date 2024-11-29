@@ -21,14 +21,17 @@
     </head>
     <body>
         <h1>Lets play Rock Paper Scissors!</h1>
+        <h2>First player to 5 wins is the champion</h2>
         <div class="statsContainer">
         <div class="stats win">Wins: <p id="wins"></p></div>
         <div class="stats lose">Losses: <p id="losses"></p></div>
         <div class="stats tie">Ties: <p id="ties"></p></div>
         </div>
-        <div class="buttonContainer">
-        <button class="button" onclick="winner(getHumanChoice())">Play again!</button>
-        <button class="button" onclick="reset()">Reset</button>
+        <div class="buttonContainer" onclick="buttonAction(event)">
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>
+            <button id="reset">Reset</button>
         </div>
     </body>
 </html>
